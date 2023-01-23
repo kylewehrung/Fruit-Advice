@@ -1,20 +1,110 @@
 
 
 html {
-    background-color: #fcfcfc;
-   
+    background-color: hsl(320, 23%, 97%);
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Helvetica', sans-serif;
     color: rgb(0, 0, 0);
 }
 h1 {
-    font-size: 5em;
+    font-size: 13mm;
     text-align:center;
+    
 }
 h2 {
-    width: 100px;
+    width: 100px; 
+    height: 15px;
+    padding-left: 30px;
 }
+
+ #card-title {
+    font-size: 25px;
+    padding-left: 80px;
+   
+    
+}
+
+#like-count {
+
+    font-size: 17px;
+    padding-left: 87px;
+   
+}
+
+
+
+#card-image {
+    width: 250px;
+    height: 250px;
+    padding-left: 80px;
+    
+}
+
+
+.fruit-title {
+    font-size: 25px;
+    padding-left: 87px;;
+}
+
+
+#common-name {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+
+#order {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#family {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#genus {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#carbohydrates {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#protein {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#fat {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+#calories{
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+
+#sugar {
+    font-size: 17px;
+    padding-left: 87px;
+}
+
+
+
+
+
+
+
+
+
+
+
 h3 {
     width: 100px;
 }

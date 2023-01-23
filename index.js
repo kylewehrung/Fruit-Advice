@@ -28,10 +28,10 @@ function getFruitNames(fruitObj){
     //put it on the list on left side of screen
     //Click event to open up fruit info
     const fruitList = document.querySelector("#fruit-list")
-    const h1 = document.createElement('h1')
-    h1.textContent = fruitObj.name
-    fruitList.append(h1)
-    h1.addEventListener("click", (e) => renderFruitDetail(fruitObj) )
+    const h2 = document.createElement('h2') //changed h1 to h2 to format
+    h2.textContent = fruitObj.name
+    fruitList.append(h2)
+    h2.addEventListener("click", (e) => renderFruitDetail(fruitObj) )
 }
 
 function renderFruitDetail(fruitObj) {
