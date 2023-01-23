@@ -58,3 +58,4 @@ function increaseLikes(){
 console.log(button)
 
 getFruitInfo(fruitUrl)
+//something
