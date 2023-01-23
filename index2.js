@@ -17,7 +17,7 @@ fetch(shibeUrl)
 }
 renderShibe(shibeUrl);
 
-
+//we can delete this index2.js, just had it to build out the fetch.
 
 
 

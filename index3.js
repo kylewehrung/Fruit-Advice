@@ -65,6 +65,30 @@ function renderFruitDetail(fruitObj) {
     fruitTitle.textContent = fruitObj.name
 }
 
+
+function editFunc () {
+const editButton = document.createElement('button')
+editButton.textContent = "Edit Fruit"
+
+const divDropDown = document.querySelector("#drop-down")
+divDropDown.append(editButton)
+editButton.addEventListener("click", () => {
+const editForm = document.querySelector("#edit-form")
+
+if (editForm.style.display === "none") {
+  editForm.style.display = "block";
+} else {
+  editForm.style.display = "none";
+}
+})
+}
+editFunc() 
+//I feel like it's close. The inputs are made, but not being displayed for whatever reason. idk my brain is fried 
+
+
+
+
+
 button.addEventListener("click", increaseLikes)
 
 function increaseLikes(){
