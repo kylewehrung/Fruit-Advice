@@ -1,5 +1,6 @@
 // Global constants
-const fruitUrl = 'http://localhost:3000/fruit'
+//https://fruityvice.com/api/fruit/all
+const fruitUrl = ' http://localhost:3000/fruit'
 const commonName = document.querySelector("#common-name")
 const order = document.querySelector("#order")
 const family = document.querySelector("#family")
