@@ -11,6 +11,7 @@ const calories = document.querySelector("#calories")
 const sugar = document.querySelector("#sugar")
 const button = document.querySelector('#like-button')
 const likes = document.querySelector('#like-count')
+const fruitTitle = document.querySelector("#card-title")
 let number = 0
 // End global constants
 
@@ -35,7 +36,6 @@ function getFruitNames(fruitObj){
 }
 
 function renderFruitDetail(fruitObj) {
-    commonName.textContent = fruitObj.name
     order.textContent = fruitObj.order
     family.textContent = fruitObj.family
     genus.textContent = fruitObj.genus
@@ -44,6 +44,7 @@ function renderFruitDetail(fruitObj) {
     protein.textContent = `Protein: ${fruitObj.nutritions.protein}`
     fat.textContent = `Fat: ${fruitObj.nutritions.fat}`
     sugar.textContent = `Sugar: ${fruitObj.nutritions.sugar}`
+    fruitTitle.textContent = fruitObj.name
 }
 
 button.addEventListener("click", increaseLikes)

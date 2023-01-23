@@ -1,7 +1,7 @@
 
 
 html {
-    background-color: hsl(320, 23%, 97%);
+    background-color: hsl(80, 20%, 97%);
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Helvetica', sans-serif;
@@ -13,10 +13,14 @@ h1 {
     
 }
 h2 {
+    font-size: 6mm;
     width: 100px; 
-    height: 15px;
+    height: 20px;
     padding-left: 30px;
 }
+
+
+
 
  #card-title {
     font-size: 25px;
@@ -44,55 +48,58 @@ h2 {
 
 .fruit-title {
     font-size: 25px;
-    padding-left: 87px;;
+    
+
+    
+   
 }
 
 
 #common-name {
     font-size: 17px;
-    padding-left: 87px;
+   
 }
 
 
 #order {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 #family {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 #genus {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 #carbohydrates {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 #protein {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left:
 }
 
 #fat {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 #calories{
     font-size: 17px;
-    padding-left: 87px;
+    padding-left: 
 }
 
 
 #sugar {
     font-size: 17px;
-    padding-left: 87px;
+    padding-left:
 }
 
 
