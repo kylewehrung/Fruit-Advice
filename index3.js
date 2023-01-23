@@ -1,6 +1,7 @@
 // Global constants
 //https://fruityvice.com/api/fruit/all
 const fruitUrl = ' http://localhost:3000/fruit'
+const shibeUrl = "http://shibe.online/api/shibes?count=[1-100]"
 const commonName = document.querySelector("#common-name")
 const order = document.querySelector("#order")
 const family = document.querySelector("#family")
@@ -14,7 +15,22 @@ const button = document.querySelector('#like-button')
 const likes = document.querySelector('#like-count')
 const fruitTitle = document.querySelector("#card-title")
 let number = 0
+// let fruitArray;
 // End global constants
+
+
+function renderShibe() {
+fetch(shibeUrl)
+.then(function(response) { return response.json(); })
+.then(function(shibeData) { 
+ shibeData.forEach(shibeData => {
+    console.log(shibeData);
+    img = document.querySelector("#card-image");
+    img.src = shibeData
+     
+ })
+})
+}
 
 
 function getFruitInfo(url){
@@ -23,6 +39,7 @@ function getFruitInfo(url){
     .then(fruit => {
         console.log(fruit)
         fruit.forEach(getFruitNames)})
+        // getFruitNames(fruitArray[0])
 }
 
 function getFruitNames(fruitObj){
@@ -58,3 +75,5 @@ function increaseLikes(){
 console.log(button)
 
 getFruitInfo(fruitUrl)
+
+renderShibe(shibeUrl)

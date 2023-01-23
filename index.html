@@ -12,7 +12,11 @@
     <h1 style="position:relative; top: -50px;">Fruit Advice</h1>
     </header>
 
-<div style="position:relative; top: -70px;" class="container">
+    <div style="position:relative; left: 35px; top: -60px;">
+         <button type="button" id="add-button"  class="collapsible" data-toggle="collapse" data-target="#test">Add Fruit</button>
+         <div id="test" class="collapse">fruit</div>
+    </div>
+    <div style="position:relative; top: -70px;" class="container">
     <nav id="fruit-list">
     <!-- Add fruit list here-->
     </nav>
@@ -23,13 +27,14 @@
             <!--Image container-->
             <div style="position:relative; top: -40px;"  class="image-container">
                 <h4 id="card-title"> Name of fruit goes here</h4>
-                <img id="card-image" class="image" src="./assets/image-placeholder.jpg"/>
+                <img id="card-image" class="image" src=/>
                 <div class="likes-section">
                     <span id="like-count" class="likes"> 0 likes</span>
                     <button id="like-button" class="like-button">♥</button>
                 </div>
             </div>
         </div>
+       
         
         <div>
             <div style="position:relative; left: 390px; top: -410px;" class="info-container">
@@ -46,8 +51,6 @@
                     <p id="calories"></p>
                     <p id="sugar"></p>
                 </h3>
-                <form>
-                </form>
             </div>
         </div>
 
@@ -57,6 +60,7 @@
 
 
 
-    <script src="index.js"></script>
+
+    <script src="index3.js"></script>
 </body>
 </html>
