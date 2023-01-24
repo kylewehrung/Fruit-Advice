@@ -1,12 +1,12 @@
 
 
 html {
-    background-color: #348923;
+    background-color: #fcfcfc;
    
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Helvetica', sans-serif;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
 h1 {
     font-size: 5em;
