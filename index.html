@@ -46,7 +46,7 @@
         </div>
         
         <div class="fruit-p" style="position:relative; left: 390px; top: -325px;">
-            <p id="common-name">Name: </p>
+            <!-- <p id="common-name">Name: </p> -->
             <p id="order">Order: </p>
             <p id="family">Family: </p>
             <p id="genus">Genus: </p>
@@ -64,15 +64,23 @@
                 <!--All fruit info- should be in container on the right-->
                 <form id="fruit-form">
                     <h4 class="fruit-title">Fruit Info:</h4> 
+                    <label id="common-name" for="new-name">Name</label>
                     <input id="new-name" />
-                    <label id="common-name" for="new-name"></label>
+                    <label id="common-order" for="new-order">Order</label>
                     <input id="new-order"/>
+                    <label id="common-family" for="new-family">Family</label>
                     <input id="new-family"/>
+                    <label id="common-genus" for="new-genus">Genus</label>
                     <input id="new-genus"/>
+                    <label id="common-carbs" for="new-carbs">Carbohydrates</label>
                     <input id="new-carbs"/>
+                    <label id="common-protein" for="new-protein">Protein</label>
                     <input id="new-protein"/>
+                    <label id="common-fat" for="new-fat">Fat</label>
                     <input id="new-fat"/>
+                    <label id="common-calories" for="new-calories">Calories</label>
                     <input id="new-calories"/>
+                    <label id="common-sugar" for="new-sugar">Sugar</label>
                     <input id="new-sugar"/>
                     <button id= "submit-button" type=“submit”>Submit</button>
                 </form>
