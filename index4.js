@@ -1,7 +1,9 @@
-// Global constants
-//https://fruityvice.com/api/fruit/all
-const fruitUrl = ' http://localhost:3000/fruit'
-const shibeUrl = "http://shibe.online/api/shibes?count=[1-100]"
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Global constants
+  //https://fruityvice.com/api/fruit/all
+  const fruitUrl = ' http://localhost:3000/fruit'
+  const shibeUrl = "http://shibe.online/api/shibes?count=[1-100]"
 const commonName = document.querySelector("#common-name")
 const order = document.querySelector("#order")
 const family = document.querySelector("#family")
@@ -101,6 +103,11 @@ function submitNewFruit(e) {
 console.log(button)
 getFruitInfo(fruitUrl)
 renderShibe(shibeUrl)
+
+
+
+
+}) 
 // Code ends here, the below function is a collapsible object that is being worked on
 
 
