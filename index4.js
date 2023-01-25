@@ -1,0 +1,134 @@
+// Global constants
+//https://fruityvice.com/api/fruit/all
+const fruitUrl = ' http://localhost:3000/fruit'
+const shibeUrl = "http://shibe.online/api/shibes?count=[1-100]"
+const commonName = document.querySelector("#common-name")
+const order = document.querySelector("#order")
+const family = document.querySelector("#family")
+const genus = document.querySelector("#genus")
+const carbohydrates = document.querySelector("#carbohydrates")
+const protein = document.querySelector("#protein")
+const fat = document.querySelector("#fat")
+const calories = document.querySelector("#calories")
+const sugar = document.querySelector("#sugar")
+const button = document.querySelector('#like-button')
+const submitButton = document.querySelector("#fruit-form")
+const likes = document.querySelector('#like-count')
+const fruitTitle = document.querySelector("#card-title")
+let number = 0
+// let fruitArray;
+// End global constants
+
+
+function renderShibe() {
+fetch(shibeUrl)
+.then(function(response) { return response.json(); })
+.then(function(shibeData) { 
+ shibeData.forEach(shibeData => {
+    console.log(shibeData);
+    img = document.querySelector("#card-image");
+    img.src = shibeData
+     
+ })
+})
+}
+
+
+function getFruitInfo(url){
+    fetch(url)
+    .then(response => response.json())
+    .then(fruit => {
+        console.log(fruit)
+        fruit.forEach(getFruitNames)})
+        // getFruitNames(fruitArray[0])
+}
+
+function getFruitNames(fruitObj){
+    // want to get the fruit name
+    //put it on the list on left side of screen
+    //Click event to open up fruit info
+    const fruitList = document.querySelector("#fruit-list")
+    const h2 = document.createElement('h2') //changed h1 to h2 to format
+    h2.textContent = fruitObj.name
+    fruitList.append(h2)
+    h2.addEventListener("click", (e) => renderFruitDetail(fruitObj) )
+}
+
+function renderFruitDetail(fruitObj) {
+    order.textContent = fruitObj.order
+    family.textContent = fruitObj.family
+    genus.textContent = fruitObj.genus
+    calories.textContent = `Calories: ${fruitObj.nutritions.calories}`
+    carbohydrates.textContent = `Carbohydrates: ${fruitObj.nutritions.carbohydrates}`
+    protein.textContent = `Protein: ${fruitObj.nutritions.protein}`
+    fat.textContent = `Fat: ${fruitObj.nutritions.fat}`
+    sugar.textContent = `Sugar: ${fruitObj.nutritions.sugar}`
+    fruitTitle.textContent = fruitObj.name
+}
+
+
+// function editFunc () {
+// const editButton = document.createElement('button')
+// editButton.textContent = "Edit Fruit"
+
+// const divDropDown = document.querySelector("#drop-down")
+// divDropDown.append(editButton)
+// editButton.addEventListener("click", () => {
+// const editForm = document.querySelector("#edit-form")
+
+// if (editForm.style.display === "none") {
+//   editForm.style.display = "block";
+// } else {
+//   editForm.style.display = "none";
+// }
+// })
+// }
+// editFunc() 
+//I feel like it's close. The inputs are made, but not being displayed for whatever reason. idk my brain is fried 
+
+
+
+button.addEventListener("click", increaseLikes)
+
+function increaseLikes(){
+    number++;
+    likes.textContent = number + " likes"
+}
+
+submitButton.addEventListener("submit", submitNewFruit)
+
+function submitNewFruit(e) {
+  e.preventDefault()
+  // debugger
+  const newName = e.target[0].value
+  const newOrder = e.target[1].value
+  const newFamily = e.target[2].value
+  const newGenus = e.target[3].value
+  const newCarbohydrates = e.target[4].value
+  const newProtein = e.target[5].value
+  const newFat = e.target[6].value
+  const newCalories = e.target[7].value
+  const newSugar = e.target[8].value
+  const newFruitObj = {
+    name: newName,
+    order: newOrder,
+    family: newFamily,
+    genus: newGenus,
+    carbohydrates: newCarbohydrates,
+    protein: newProtein,
+    fat: newFat,
+    calories: newCalories,
+    sugar, newSugar,
+  }
+  getFruitNames(newFruitObj)
+//   renderFruitDetail(newFruitObj)
+
+
+}
+
+
+console.log(button)
+
+getFruitInfo(fruitUrl)
+
+renderShibe(shibeUrl)

@@ -15,7 +15,6 @@
     
     <div id="drop-down" style="position:relative; left: 35px; top: -60px;">
     <form id="edit-form">
-        <label id="common-name"></label>
         <label id="form-order"></label>
         <label id="form-genus"></label>
         <label id="form-species"></label>
@@ -45,30 +44,35 @@
                 </div>
             </div>
         </div>
-       
+        
+        <div class="fruit-p" style="position:relative; left: 390px; top: -325px;">
+            <p id="common-name">Name: </p>
+            <p id="order">Order: </p>
+            <p id="family">Family: </p>
+            <p id="genus">Genus: </p>
+            <p id="carbohydrates">Carbohydrates: </p>
+            <p id="protein">Protein: </p>
+            <p id="fat">Fat: </p>
+            <p id="calories">Calories: </p>
+            <p id="sugar">Sugar: </p>
+
+        </div>
+        
         
         <div>
-            <div style="position:relative; left: 390px; top: -410px;" class="info-container">
+            <div style="position:relative; left: -20px;" class="info-container">
                 <!--All fruit info- should be in container on the right-->
                 <form id="fruit-form">
                     <h4 class="fruit-title">Fruit Info:</h4> 
-                    <p id="common-name">Name: </p>
-                    <input id="new-name"/>
-                    <p id="order">Order: </p>
+                    <input id="new-name" />
+                    <label id="common-name" for="new-name"></label>
                     <input id="new-order"/>
-                    <p id="family">Family: </p>
                     <input id="new-family"/>
-                    <p id="genus">Genus: </p>
                     <input id="new-genus"/>
-                    <p id="carbohydrates">Carbohydrates: </p>
                     <input id="new-carbs"/>
-                    <p id="protein">Protein: </p>
                     <input id="new-protein"/>
-                    <p id="fat">Fat: </p>
                     <input id="new-fat"/>
-                    <p id="calories">Calories: </p>
                     <input id="new-calories"/>
-                    <p id="sugar">Sugar: </p>
                     <input id="new-sugar"/>
                     <button id= "submit-button" type=“submit”>Submit</button>
                 </form>
@@ -82,6 +86,6 @@
 
 
 
-    <script src="index3.js"></script>
+    <script src="index4.js"></script>
 </body>
 </html>
