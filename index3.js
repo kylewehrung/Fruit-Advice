@@ -12,6 +12,7 @@ const fat = document.querySelector("#fat")
 const calories = document.querySelector("#calories")
 const sugar = document.querySelector("#sugar")
 const button = document.querySelector('#like-button')
+const submitButton = document.querySelector("#fruit-form")
 const likes = document.querySelector('#like-count')
 const fruitTitle = document.querySelector("#card-title")
 let number = 0
@@ -66,26 +67,24 @@ function renderFruitDetail(fruitObj) {
 }
 
 
-function editFunc () {
-const editButton = document.createElement('button')
-editButton.textContent = "Edit Fruit"
+// function editFunc () {
+// const editButton = document.createElement('button')
+// editButton.textContent = "Edit Fruit"
 
-const divDropDown = document.querySelector("#drop-down")
-divDropDown.append(editButton)
-editButton.addEventListener("click", () => {
-const editForm = document.querySelector("#edit-form")
+// const divDropDown = document.querySelector("#drop-down")
+// divDropDown.append(editButton)
+// editButton.addEventListener("click", () => {
+// const editForm = document.querySelector("#edit-form")
 
-if (editForm.style.display === "none") {
-  editForm.style.display = "block";
-} else {
-  editForm.style.display = "none";
-}
-})
-}
-editFunc() 
+// if (editForm.style.display === "none") {
+//   editForm.style.display = "block";
+// } else {
+//   editForm.style.display = "none";
+// }
+// })
+// }
+// editFunc() 
 //I feel like it's close. The inputs are made, but not being displayed for whatever reason. idk my brain is fried 
-
-
 
 
 
@@ -95,6 +94,38 @@ function increaseLikes(){
     number++;
     likes.textContent = number + " likes"
 }
+
+submitButton.addEventListener("submit", submitNewFruit)
+
+function submitNewFruit(e) {
+  e.preventDefault()
+  // debugger
+  const newName = e.target[0].value
+  const newOrder = e.target[1].value
+  const newFamily = e.target[2].value
+  const newGenus = e.target[3].value
+  const newCarbohydrates = e.target[4].value
+  const newProtein = e.target[5].value
+  const newFat = e.target[6].value
+  const newCalories = e.target[7].value
+  const newSugar = e.target[8].value
+  const newFruitObj = {
+    name,
+    order,
+    family,
+    genus,
+    carbohydrates,
+    protein,
+    fat,
+    calories,
+    sugar
+  }
+  getFruitNames(newFruitObj.name)
+  renderFruitDetail(newFruitObj)
+
+
+}
+
 
 console.log(button)
 

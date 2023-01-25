@@ -15,15 +15,15 @@
     
     <div id="drop-down" style="position:relative; left: 35px; top: -60px;">
     <form id="edit-form">
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
+        <label id="common-name"></label>
+        <label id="form-order"></label>
+        <label id="form-genus"></label>
+        <label id="form-species"></label>
+        <label id="form-carbohydrates"></label>
+        <label id="form-protein"></label>
+        <label id="form-fat"></label>
+        <label id="form-calories"></label>
+        <label id="form-sugar"></label>
     </form>
     </div>
 
@@ -50,18 +50,28 @@
         <div>
             <div style="position:relative; left: 390px; top: -410px;" class="info-container">
                 <!--All fruit info- should be in container on the right-->
-                <h4  class="fruit-title">Fruit Info:</h4> 
-                <h3>
-                    <p id="common-name"></p>
-                    <p id="order"></p>
-                    <p id="family"></p>
-                    <p id="genus"></p>
-                    <p id="carbohydrates"></p>
-                    <p id="protein"></p>
-                    <p id="fat"></p>
-                    <p id="calories"></p>
-                    <p id="sugar"></p>
-                </h3>
+                <form id="fruit-form">
+                    <h4 class="fruit-title">Fruit Info:</h4> 
+                    <p id="common-name">Name: </p>
+                    <input id="new-name"/>
+                    <p id="order">Order: </p>
+                    <input id="new-order"/>
+                    <p id="family">Family: </p>
+                    <input id="new-family"/>
+                    <p id="genus">Genus: </p>
+                    <input id="new-genus"/>
+                    <p id="carbohydrates">Carbohydrates: </p>
+                    <input id="new-carbs"/>
+                    <p id="protein">Protein: </p>
+                    <input id="new-protein"/>
+                    <p id="fat">Fat: </p>
+                    <input id="new-fat"/>
+                    <p id="calories">Calories: </p>
+                    <input id="new-calories"/>
+                    <p id="sugar">Sugar: </p>
+                    <input id="new-sugar"/>
+                    <button id= "submit-button" type=“submit”>Submit</button>
+                </form>
             </div>
         </div>
 
