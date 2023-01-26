@@ -16,7 +16,6 @@ const submitButton = document.querySelector("#fruit-form")
 const likes = document.querySelector('#like-count')
 const fruitTitle = document.querySelector("#card-title")
 let number = 0
-// let fruitArray;
 // End global constants
 
 

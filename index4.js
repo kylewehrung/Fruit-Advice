@@ -37,6 +37,7 @@ function getFruitInfo(url){
     .then(fruit => {
         console.log(fruit)
         fruit.forEach(getFruitNames)})
+    
 }
 
 // This function gets the fruit names from the db.json and adds them to the column on the left
@@ -60,15 +61,15 @@ function renderFruitDetail(fruitObj) {
     sugar.textContent = `Sugar: ${fruitObj.nutritions.sugar}`
     fruitTitle.textContent = fruitObj.name
     
-}
+  }
+  
+  // This button and function increments the likes when the button is pushed
+  button.addEventListener("click", increaseLikes)
+  function increaseLikes(){
+      number++;
+      likes.textContent = number + " likes"
+  }
 
-
-// This button and function increments the likes when the button is pushed
-button.addEventListener("click", increaseLikes)
-function increaseLikes(){
-    number++;
-    likes.textContent = number + " likes"
-}
 
 // This button and function allow you to add new fruit and information in to the HTML
 submitButton.addEventListener("submit", submitNewFruit)
