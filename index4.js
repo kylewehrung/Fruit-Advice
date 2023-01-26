@@ -20,13 +20,13 @@ const fruitTitle = document.querySelector("#card-title")
 let number = 0
 // End global constants
 
-function renderShibe() {
+function renderShiba() {
   fetch(shibeUrl)
   .then(response => response.json())
-  .then(shibeData => {
-    shibeData.forEach(shibeData => {
+  .then(shibaData => {
+    shibaData.forEach(shibaData => {
       img = document.querySelector("#card-image")
-      img.src = shibeData
+      img.src = shibaData
     })
   })
 }
@@ -103,7 +103,7 @@ function submitNewFruit(e) {
 
 console.log(button)
 getFruitInfo(fruitUrl)
-renderShibe(shibeUrl)
+renderShiba(shibeUrl)
 
 
 
